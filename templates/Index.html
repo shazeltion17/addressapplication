@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+
+<link rel="stylesheet" href="/static/mainpage.css">
+<script src="/static/jsfile.js"></script>
+
+<body>
+<h1>Please Enter Text with addresses</h1>
+<!--    <form action="/address" method="POST" id="inputform">-->
+    <form id="inputform" onsubmit="return false">
+        <textarea type="text" id="input1" name="inputAddress"></textarea>
+        <input type="submit" onclick="displayError()">
+    </form>
+
+    <div style="display: none" id="errortext">Please enter an address</div>
+
+<!--{%if new_year%}-->
+<!--    <div style="display: Block" id="errortext">Please enter an address</div>-->
+<!--{%endif%}-->
+
+<ul>
+    <li>{{street_name}}</li>
+    <li>{{street_number}}</li>
+    <li>{{zip}}</li>
+    <li>{{state}}</li>
+</ul>
+
+</body>
+</html>
